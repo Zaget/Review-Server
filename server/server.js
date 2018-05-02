@@ -26,15 +26,13 @@ app.get('/restaurants/:id', (req, res) => {
 });
 
 app.get('/api/restaurants/:id', (req, res) => {
-  const place_id = req.params.id;
-  // console.log('place_id IS :', place_id)
+  const place_id = parseInt(req.params.id);
   Stores.findOne(place_id)
     .then((data) => {
-      // console.log('data ', data);
       res.send(data[0]);
     });
 });
 
 app.listen(port, () => {
-  // console.log(`server running at PORT: ${port}`);
+  console.log(`server running at PORT: ${port}`);
 });

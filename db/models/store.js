@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoUrlDocker = 'mongodb://database/apateez-reviews';
+// const mongoUrlDocker = 'mongodb://database/apateez-reviews';
 const mongoUrl = 'mongodb://localhost/apateez-reviews';
 
 mongoose.connect(mongoUrl); // Try localhost first
@@ -16,7 +16,7 @@ mongoose.connection.on('error', (err) => {
 
 const storeSchema = mongoose.Schema({
   place_id: {
-    type: String,
+    type: Number,
     unique: true,
   },
   name: String,
