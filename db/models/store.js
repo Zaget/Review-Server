@@ -33,7 +33,6 @@ const storeSchema = mongoose.Schema({
 const Store = mongoose.model('Store', storeSchema);
 
 const findOne = (id, callback) =>
-  // console.log('find one db triggered with ', id);
   Store.find({ place_id: id }, callback);
 const insertOne = (store, callback) => {
   console.log('NEW STORE', store);

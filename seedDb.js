@@ -37,4 +37,4 @@ const seedDb = (array) => {
 
 seedDb(inputData);
 
-// mongoimport -d apateez-reviews -c stores --type json --file test.json --numInsertionWorkers 8
+// mongoimport -d apateez-reviews -c stores --jsonArray --file test.json --numInsertionWorkers 12
