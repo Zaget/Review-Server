@@ -5,3 +5,5 @@ data.json
 description.csv
 reviews.csv
 zaget.csv
+newrelic.js
+newrelic_agent.log

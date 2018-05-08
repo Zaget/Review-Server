@@ -1,3 +1,4 @@
+const newrelic = require('newrelic');
 const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
@@ -29,6 +30,7 @@ app.get('/api/restaurants/:id', (req, res) => {
   const place_id = parseInt(req.params.id);
   Stores.findOne(place_id)
     .then((data) => {
+      res.status(200)
       res.send(data[0]);
     });
 });
