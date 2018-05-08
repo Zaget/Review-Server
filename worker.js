@@ -18,17 +18,13 @@ const getJSONfromList = (array) => {
 
     rp(options)
       .then((store) => {
-        console.log('STORE IS', store);
         const obj = store.result;
 
-        console.log('OBJ IS', obj);
         JSONarray.push(obj);
         counter++;
         if (counter < array.length) {
           createList();
         } else {
-          // write file here
-          console.log(JSONarray);
           fs.writeFile('./fullList.json', JSON.stringify(JSONarray, null, 2));
         }
       });
