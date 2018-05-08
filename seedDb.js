@@ -1,4 +1,3 @@
-const fullList = require('./195-Zagat-AllData.json');
 const Stores = require('./db/models/store.js');
 const mongoose = require('mongoose');
 const inputData = require('./data.json');
@@ -6,7 +5,7 @@ const inputData = require('./data.json');
 const seedDb = (array) => {
   let counter = 0;
 
-  var createList = () => {
+  const createList = () => {
     const obj = {
       place_id: array[counter].place_id,
       name: array[counter].name,
@@ -15,7 +14,7 @@ const seedDb = (array) => {
       price_level: array[counter].price_level,
       neighborhood: array[counter].neighborhood,
       city: array[counter].city,
-      street: array[counter].street
+      street: array[counter].street,
     };
 
     Stores.insertOne(obj, (err, content) => {
