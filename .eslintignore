@@ -5,3 +5,5 @@
 /coverage
 /tests
 /public
+/newrelic_agent.log
+/newrelic.js
